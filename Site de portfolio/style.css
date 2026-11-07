@@ -1,0 +1,333 @@
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Poppins,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+:root{
+--fundo:#151515;
+--fundo2:#141414;
+--texto:#d1d5db;
+--rgb-gradient:linear-gradient(90deg,#ff4d4d,#00e676,#4da6ff);
+}
+
+body{
+background:linear-gradient(180deg,var(--fundo),var(--fundo2));
+}
+
+main{
+margin:5%;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:fixed;
+width:100%;
+top:0;
+background:var(--fundo);
+padding:0px 20px;
+z-index:1000;
+}
+
+.logo img{
+width:150px;
+
+}
+
+.menu{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:var(--texto);
+padding:8px 14px;
+
+
+}
+
+.menu a:hover{
+color:white;
+}
+
+/* INTRO */
+
+.introdutorio{
+margin-top:200px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.introdutorio video{
+width:100%;
+max-width:1200px;
+border-radius:8px;
+}
+
+/* SOBRE */
+
+.sobre{
+display:flex;
+flex-direction:column;
+gap:100px;
+margin-top:150px;
+}
+
+.coluna{
+width:50%;
+}
+
+.coluna:last-child{
+align-self:flex-end;
+text-align:right;
+}
+
+h1{
+color:white;
+font-size:40px;
+margin-bottom:10px;
+}
+
+p{
+color:var(--texto);
+font-size:20px;
+text-align: justify;
+
+}
+
+/* PROJETOS */
+
+.Projetos{
+margin-top:150px;
+margin-bottom: 100px;
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+gap:40px;
+}
+
+.projeto{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+height:300px;
+
+}
+
+
+.projeto img,
+.projeto video{
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.7);
+transition:0.5s;
+}
+
+.projeto:hover img,
+.projeto:hover video{
+filter:brightness(1.0);
+transform:scale(1.05);  
+}
+
+.info{
+position:absolute;
+bottom:20px;
+left:20px;
+color:white;
+}
+
+/* CONTATO */
+
+.Contato{
+margin-top:150px;
+text-align:center;
+}
+
+.form-contato{
+
+margin-top:40px;
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
+}
+
+.form-contato input,
+.form-contato textarea{
+width:100%;
+max-width:600px;
+padding:15px;
+border:none;
+border-radius:8px;
+background:#111;
+color:white;
+}
+
+.form-contato button{
+padding:12px 30px;
+border:none;
+border-radius:8px;
+background:var(--rgb-gradient);
+color:white;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:15%;
+padding:0px;
+background:#000;
+color:var(--texto);
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+justify-content: center;
+
+}
+
+.footer-coluna{
+flex:1;
+min-width:200px;
+margin-top: 5%;
+margin-left: 10%;
+}
+
+.footer-coluna h3{
+color:white;
+margin-bottom:15px;
+}
+
+.footer-coluna a{
+display:block;
+color:var(--texto);
+text-decoration:none;
+margin-bottom:8px;
+}
+
+.footer-coluna a:hover{
+color:white;
+}
+
+.copyright{
+text-align:center;
+margin-top:40px;
+font-size:14px;
+opacity:0.6;
+}
+
+/* DIVISOR */
+
+.divisor{
+width:100%;
+height:2px;
+margin:120px 0;
+background:var(--rgb-gradient);
+}
+
+/* RESPONSIVO */
+
+@media screen and (max-width:900px){
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.Projetos{
+grid-template-columns:1fr;
+}
+
+.coluna{
+width:100%;
+text-align:left;
+}
+
+.coluna:last-child{
+text-align:left;
+align-self:flex-start;
+}
+
+}
+
+@media screen and (max-width:620px){
+
+nav {
+
+    flex-direction: column-reverse; 
+    padding: 20px;
+  }
+
+.menu {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: 15px;      
+  }
+
+.logo img {
+width: 130px;          
+  }
+
+
+.introdutorio{margin-top: 80%;}
+
+.Projetos{
+grid-template-columns:1fr;
+}
+
+form{margin-bottom: 40%;}
+
+.coluna{
+width:100%;
+text-align:left;
+}
+
+.coluna:last-child{
+text-align:left;
+align-self:flex-start;
+}
+
+}
+
+/*Visualização Projeto*/
+
+.projeto1{
+margin-top:5%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.projeto1{
+width:100%;
+}
+
+.projeto2{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.projeto2{
+width:100%;
+}
